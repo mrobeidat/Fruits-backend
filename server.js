@@ -115,6 +115,8 @@ function deleteHandler(req, res) {
 
 function updateHandler(req, res) {
 
+    const id = req.params.id;
+
     const { name, image, price, email } = req.body;
 
     fruitModel.findByIdAndUpdate(id, { name, image, price }, (err, result) => {
